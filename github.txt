@@ -1,0 +1,22 @@
+data
+
+
+
+module LogicGates(a,b,c,d,e);
+input a,b,c;
+output d,e;
+assign d = (a&&b)||(!c);
+assign e = !c;
+endmodule
+
+...................................
+1
+
+Module LogicGates(a,b,c,d,e);
+Input  a,b,c ;
+Output  d,e ;
+Wire  w1;
+and(w1,a,b);
+not(e,c);
+or(d,w1,e);
+end module
